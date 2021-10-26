@@ -183,6 +183,7 @@ Potential improvement ideas:
   - Test controller methods
   - Aim for 70% coverage of critical features
 - Add express middleware for security/enhanced features
+- Add storybook for component developement/showcasing 
 
 Please let me know if you have any issues or questions.
 Cheers!
