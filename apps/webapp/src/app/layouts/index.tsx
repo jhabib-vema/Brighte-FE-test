@@ -18,6 +18,7 @@ export const DefaultLayout = ({ children }: LayoutProps) => {
     >
       <Box
         sx={{
+          // TODO: Align with theme spacing tokens
           p: '44px 0',
           width: '100%',
           display: 'block',

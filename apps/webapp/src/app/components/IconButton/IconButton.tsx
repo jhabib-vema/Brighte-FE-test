@@ -5,7 +5,7 @@ interface IconButtonProps {
   onClick?: () => void;
 }
 
-// TODO: Refactor this component
+// TODO: Refactor this component to use MUI
 const IconButton: React.FC<IconButtonProps> = ({ onClick, children }) => (
   <button className={style.iconButton} onClick={onClick}>
     {children}

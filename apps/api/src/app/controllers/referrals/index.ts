@@ -35,7 +35,6 @@ const updateReferralById = async (req: Request, res: Response) => {
 
 const deleteReferralById = async (req: Request, res: Response) => {
   const id = Number(req.params.id);
-  console.log({ id });
   const referral = await prisma.referral.delete({
     where: {
       id,

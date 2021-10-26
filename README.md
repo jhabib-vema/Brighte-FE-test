@@ -164,17 +164,25 @@ A couple of considerations:
 - I've left various comments throughout the app with potential considerations labelled with either NOTE or TODO
 - Incomplete items have been marked as TODO
 - There is a known bug with the Places Autocomplete dropdown where it does not populate existing values into the autocomplete
-- The google maps API does not provide granular level control over grabbing things like 'suburb, country' etc. Instead, it returns an `address_component` array which you need to parse to find via `type` array based on their address keys. This has not been implemented, but that is the approach I would use. For now, the `addressLine` property is captured as the full formatted address, and saved in the DB.
-- I've left my API key for Google Maps so that it works without any .env properties. It is currently unrestricted for local development - please let me know once you're done reviewing this so I can restrict it.
+- The google maps API does not provide granular level control over grabbing things like 'suburb, country' etc. Instead, it returns an `address_component` array which you need to parse to find via the `type` array based on their address category keys. This has not been implemented, but that is the approach I would use. For now, the `addressLine` property is captured as the full formatted address, and saved in the DB.
+- I've sent my API key via email to be passed onto you. It is currently unrestricted for local development - please let me know once you're done reviewing this so I can restrict it. You'll need to add it to the `<script>` import where it says `YOUR KEY HERE` inside of `apps/webapp/src/index.html` 
 - Theming isn't properly leveraged since I didn't have a lot of the Brighte design tokens
 
 Potential improvement ideas:
+- Leverage theming for consistency across components within application
 - Remove CSS files in favour of MUI's SX styling prop (I've left a couple of examples)
 - Implement loading states for better UX & visual feedback to the user
 - Refactor some components to be more reusable / extensible
 - Better error handling with more descriptive messages on the UI 
+- Add phone number validation to prevent text & make sure it's a valid area code
+- Responsive design for table + actions
 - Implement Testing
-  - Unit testing across react components with something like react-testing-library/enzyme
-  - End-to-end testing with something like cypress
+  - Unit testing across react components with react-testing-library
+  - End-to-end testing with cypress
   - Test API endpoints with supertest
+  - Test controller methods
   - Aim for 70% coverage of critical features
+- Add express middleware for security/enhanced features
+
+Please let me know if you have any issues or questions.
+Cheers!

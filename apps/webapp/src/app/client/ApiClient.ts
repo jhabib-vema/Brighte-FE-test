@@ -1,7 +1,7 @@
 import { default as axios } from 'axios';
-import { AxiosInstance, AxiosStatic, AxiosError, AxiosResponse } from 'axios';
 import { API_URL_BASE } from '../constants';
 import { Referral } from '../types/referral';
+import { AxiosInstance, AxiosStatic, AxiosError, AxiosResponse } from 'axios';
 
 export interface ApiClientParams {
   baseURL?: string;

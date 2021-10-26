@@ -100,6 +100,7 @@ const ReferralList: React.FC = () => {
   };
 
   const handleAddNew = () => {
+    // Reset RHF form values
     resetRHF({});
     setTrackedReferral(null);
     openModal();
@@ -121,6 +122,7 @@ const ReferralList: React.FC = () => {
         handleModalClose={handleModalClose}
       />
       <ReferralTable onEdit={handleEdit} onDelete={handleDeleteConfirm} referrals={data} />
+      {/* TODO: Create proper button variants using theme */}
       <Button sx={{ width: '100%', mt: 2, color: 'white' }} variant="contained" onClick={handleAddNew}>
         Add New
       </Button>

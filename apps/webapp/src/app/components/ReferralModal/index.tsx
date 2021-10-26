@@ -26,7 +26,7 @@ type FormField = {
 const ReferralFormFields: FormField[] = [
   {
     name: 'email',
-    label: 'Label',
+    label: 'Email',
     rules: {
       required: { value: true, message: 'Please enter email' },
     },

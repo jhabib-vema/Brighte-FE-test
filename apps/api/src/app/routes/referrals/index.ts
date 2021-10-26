@@ -5,6 +5,7 @@ const router = express.Router({
   mergeParams: true,
 });
 
+/* Referral Routes: /referrals */
 router.get('/', async (req: express.Request, res: express.Response) => {
   return await referralController.getAllReferrals(req, res);
 });
